@@ -15,10 +15,33 @@
             <h1>Calculadora de Desconto do INSS</h1>
         </header>
 
-        <textarea class="prompt-input" placeholder="Digite o seu salário bruto..." required autofocus></textarea>
-        <button>
-            <i class="fa-solid fa-check"></i>
-        </button>
+        <!--AQUI ESTAMOS BOTANDO O form, que
+        é basicamente a ferramenta do Flask para
+        acessarmos o html e enviarmos os dados
+        para o nosso código python-->
+
+        <!--O method="POST" MANDA as informações
+        contidas no textarea para o python-->
+        <form method="POST">
+            <textarea
+                class="prompt-input"
+                name="salario_bruto"
+                placeholder="Digite o seu salário bruto..."
+                required
+                autofocus
+            ></textarea>
+            <button type="submit">
+                <i class="fa-solid fa-check"></i>
+            </button>
+        </form>
+
+        {% if inss is defined %}
+            <div class="resultado">
+                <p>Salário bruto: R$ {{ salario_bruto }}</p>
+                <p>INSS aproximado: R$ {{ inss }}</p>
+            </div>
+        {% endif %}
+
     </div>
         
 </body>
