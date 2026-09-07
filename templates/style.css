@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --cor-1: #1DBD8E;
+    --cor-2: #2D3F54;
+    --cor-3: #52647A;
+    --cor-4: #73CC80;
+    --cor-5: #004C94;
+    --cor-6: #006ECF;
+    
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+body .container{
+   width: 500px;
+   background: var(--cor-5);
+   margin: 30px;
+   border-radius: 10px;
+   /*Sombra - Amei*/
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7)
+   
+}
+
+body .container .prompt-input{
+    margin: 10px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+body .container .header h1 {
+    color: #fff;
+}
+
+body .container button {
+    background: var(--cor-2);
+    color: var(--cor-3);
+    border-radius: 5px;
+    /*BOTTOM - serve para subir uma peça
+    no CSS
+    POSITION - auxilia o bottom */
+    bottom: 18px;
+    position: relative;
+
+}
+
+body .container button:hover {
+    cursor: pointer;
+}
+
+h1 {
+    color: var(--cor-6);
+    margin: 10px;
+}

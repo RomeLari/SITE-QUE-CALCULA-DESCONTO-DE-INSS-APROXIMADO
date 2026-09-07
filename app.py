@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 
 salario_bruto = float(input("Digite o seu salário bruto:"))
 
+app = Flask(__name__)
+
 if salario_bruto <= 1621 :
     inss = salario_bruto * 75/1000
 
